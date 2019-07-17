@@ -1,0 +1,232 @@
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*body{*/
+/*    background-color: #f1f1f1;*/
+/*    overflow-x: hidden;*/
+/*    overflow-y: scroll;*/
+/*}*/
+/*header{*/
+
+/*}*/
+/*nav{*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    height: 60px;*/
+/*    background-color: black;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    position: fixed;*/
+/*}*/
+/*main{*/
+/*    width: 100%;*/
+/*    height: 1000px;*/
+/*}*/
+/*.container{*/
+/*    margin: 90px 0;*/
+/*}*/
+/*.card{*/
+/*    margin: 35px auto;*/
+/*    border-radius: 5px;*/
+/*    width: 600px;*/
+/*    height: 600px;*/
+/*    background-color: white;*/
+/*    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);*/
+/*}*/
+/*.profile{*/
+/*    display: flex;*/
+/*}*/
+/*.profile img{*/
+/*    margin: 25px 10px 0px 25px;*/
+/*    border: 1px solid black;*/
+/*    border-radius: 30px;*/
+/*}*/
+/*.profile a{*/
+/*    margin-top: 38px;*/
+/*    text-decoration: none;*/
+/*    color: black;*/
+/*}*/
+/*.profile a:hover{*/
+/*    cursor: default;*/
+/*}*/
+/*.title{*/
+/*    margin: 15px auto;*/
+/*    width: 525px;*/
+/*    font-size: 25px;*/
+/*    font-weight: bold;*/
+/*}*/
+/*.content{*/
+/*    margin: 10px auto;*/
+/*    width: 510px;*/
+/*    height: 385px;*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    font-size: 20px;*/
+/*}*/
+/*.content a{*/
+/*    margin: 0 0 0 4px;*/
+/*    font-size: 15px;*/
+/*}*/
+/*.comment{*/
+/*    margin: auto;*/
+/*    width: 545px;*/
+/*    display: flex;*/
+/*}*/
+/*.comment img{*/
+/*    margin: auto 10px;*/
+/*    border: 1px solid black;*/
+/*    border-radius: 30px;*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*}*/
+/*.comment input{*/
+/*    border: 1px solid gray;*/
+/*    padding: 0 15px;*/
+/*    width: 480px;*/
+/*    height: 40px;*/
+/*    border-radius: 15px;*/
+/*    font-size: 15px;*/
+/*    outline: none;*/
+/*}*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+header{
+
+}
+nav{
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+main{
+    width: 100%;
+    height: 1000px;
+}
+.container{
+    margin: 90px 0;
+}
+.card{
+    margin: 35px auto;
+    border-radius: 5px;
+    width: 600px;
+    padding: 0px 0px 10px 0px;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.profile{
+    display: flex;
+    align-items: start;
+}
+.profile img{
+    margin: 25px 10px 0px 25px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.profile a{
+    margin-top: 38px;
+    text-decoration: none;
+    color: black;
+}
+.profile a:hover{
+    cursor: default;
+}
+.title{
+    margin: 15px auto 10px;
+    width: 525px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.content{
+    margin: 5px auto 20px;
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+.content a{
+    margin: 0 0 0 4px;
+    font-size: 15px;
+}
+.comment{
+    margin: auto;
+    width: 530px;
+    display: flex;
+}
+.comment img{
+    margin: auto 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+}
+.comment-box{
+    border: 1px solid gray;
+    border-radius: 15px;
+    height: 42px;
+    display: flex;
+}
+.comment-box input{
+    border: none;
+    padding: 0 10px;
+    width: 410px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 15px;
+    outline: none;
+}
+.comment-box button{
+    border: none;
+    background-color: inherit;
+    outline: none;
+}
+.comment-box img{
+    margin: auto 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+.comment-box img:hover{
+    cursor: pointer;
+    background-color: #81BEF7;
+    transition: 0.5s;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+ul{
+    display: flex;
+    margin-left: 400px;
+}
+
+li{
+    list-style: none;
+
+    font-size: 25px;
+}
+li a{
+    padding: 0 100px;
+}
+a{
+    text-decoration: none;color: white;
+}

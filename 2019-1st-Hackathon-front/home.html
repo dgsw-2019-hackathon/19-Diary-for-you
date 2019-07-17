@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>홈</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var id;
+        var password;
+        var userName;
+        var token = request.getParameter("token");
+
+        $(document).ready(function () {
+            id = $("input[name=id]");
+            userName = $("input[name=userName]");
+            password = $("input[name=password]");
+            $("#signin_Btn").click(function () {
+                if($(id).val() == ""){
+                    alert("아이디를 입력해주세요");
+                }
+                else if($(password).val() == ""){
+                    alert("비밀번호를 입력해주세요");
+                }
+                else if($(userName).val() == ""){
+                    alert("이름을 입력해주세요");
+                }
+                else{
+                    $.post({
+                        url: "http://78b27184.ngrok.io/api/register/register",
+                        headers: ("token", token),
+                        data: {"id": $(id).val() , "name" : $(userName).val(), "password" : $(password).val() },
+                        success : function (data){
+                            location.href = "index.html";
+                        },
+                        error: function (request, status, error) {
+                            console.dir(error)
+                            alert("오류입니다.")
+                        }
+                    });
+                }
+            })
+        })
+
+    </script>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="">홈</a></li>
+            <li><a href="">프로필</a></li>
+            <li><a href="">친구</a></li>
+            <li><a href="">일기쓰기</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="wrap">
+        <div class="card">
+            <div class="c-head">
+                <div class="psa"></div>
+                <div class="name">김이구</div>
+            </div>
+            <div class="content">
+                <h1>일구야 수고했다</h1>
+                <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사
+                아ㅏ아라라라라ㅏ라라라</p>
+            </div>
+            <div class="recommend">
+                <div class="psa"></div>
+                <input class="rom" type="text">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="c-head">
+                <div class="psa"></div>
+                <div class="name">김이구</div>
+            </div>
+            <div class="content">
+                <h1>일구야 수고했다</h1>
+                <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사
+                    아ㅏ아라라라라ㅏ라라라</p>
+            </div>
+            <div class="recommend">
+                <div class="psa"></div>
+                <input class="rom" type="text">
+            </div>
+        </div>
+    </div>
+
+</main>
+</body>
+</html>
