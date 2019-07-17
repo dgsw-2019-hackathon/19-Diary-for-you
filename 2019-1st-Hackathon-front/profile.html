@@ -3,21 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>프로필</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="profile.js"></script>
 </head>
 <body>
 <header>
     <nav>
+        <img src="images/logo.png"/>
         <ul>
             <li><a href="main.html">홈</a></li>
             <li><a href="profile.html">프로필</a></li>
             <li><a href="friends.html">친구</a></li>
             <li><a href="write.html">일기쓰기</a></li>
         </ul>
+        <input type="button" onclick="logout()" value="로그아웃">
     </nav>
 </header>
+
 <main>
-    <div class="wrap">
+    <div class="container">
+        <div class="spinner">
+            <img src="./img/spinner.gif" />
+        </div>
+
+    </div>
+    <!-- <div class="wrap">
+        <div class="infoCard">
+            <div class="c-head">
+                <div class="psa"></div>
+                <div class="name">김이구</div>
+            </div>
+        </div>
+        <div class="infoCard">
+            <div class="c-head">
+                <div class="psa"></div>
+                <div class="name">김이구</div>
+            </div>
+        </div>
+        <div class="infoCard">
+            <div class="c-head">
+                <div class="psa"></div>
+                <div class="name">김이구</div>
+            </div>
+        </div>
         <div class="infoCard">
             <div class="c-head">
                 <div class="psa"></div>
@@ -25,21 +55,8 @@
             </div>
         </div>
 
-        <div class="card">
-            <div class="c-head">
-                <div class="psa"></div>
-                <div class="name">김이구</div>
-            </div>
-            <div class="content">
-                <h1>일구야 수고했다</h1>
-                <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사</p>
-            </div>
-            <div class="recommend">
 
-            </div>
-        </div>
-    </div>
+    </div> -->
 </main>
-
 </body>
 </html>

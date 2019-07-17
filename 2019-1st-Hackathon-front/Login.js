@@ -13,7 +13,7 @@ $(document).ready(function () {
         }
         else{
             $.post({
-                url: "http://78b27184.ngrok.io/api/auth/login",
+                url: "http://a8cbbb7b.ngrok.io/api/auth/login",
                 data: {"id": $(id).val() , "password" : $(password).val() },
                 success : function (data){
                     location.href = "/2019-1st-Hackathon-front/main.html?token=" + encodeURI(data.data.token);

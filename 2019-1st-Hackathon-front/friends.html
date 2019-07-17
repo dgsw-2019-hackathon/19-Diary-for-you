@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>친구</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="friends.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="friends.js"></script>
@@ -11,43 +11,31 @@
 <body>
 <header>
     <nav>
+        <img src="images/logo.png"/>
         <ul>
             <li><a href="main.html">홈</a></li>
             <li><a href="profile.html">프로필</a></li>
-            <li><a href="friends.html">친구</a></li>
+            <li><a href="friends.html?id=gwak">친구</a></li>
             <li><a href="write.html">일기쓰기</a></li>
         </ul>
+        <input type="button" onclick="logout()" value="로그아웃">
     </nav>
 </header>
-
 <main>
     <div class="wrap">
-        <div class="infoCard">
-            <div class="c-head">
-                <div class="psa"></div>
-                <div class="name">김이구</div>
-            </div>
-        </div>
-        <div class="infoCard">
-            <div class="c-head">
-                <div class="psa"></div>
-                <div class="name">김이구</div>
-            </div>
-        </div>
-        <div class="infoCard">
-            <div class="c-head">
-                <div class="psa"></div>
-                <div class="name">김이구</div>
-            </div>
-        </div>
-        <div class="infoCard">
-            <div class="c-head">
-                <div class="psa"></div>
-                <div class="name">김이구</div>
-            </div>
+        <div class="spinner">
+            <img src="./img/spinner.gif" />
         </div>
 
+        <!--<div class="friend-card">
+            <div class="profile-img">
+                <img src="https://img.icons8.com/color/100/000000/user.png">
+            </div>
+            <div class="profile-name">
+                <a href="#">가나다라마바사</a>
+            </div>
 
+        </div>-->
     </div>
 </main>
 </body>

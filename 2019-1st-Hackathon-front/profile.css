@@ -1,99 +1,5 @@
-/**{*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    box-sizing: border-box;*/
-/*}*/
-/*body{*/
-/*    background-color: #f1f1f1;*/
-/*    overflow-x: hidden;*/
-/*    overflow-y: scroll;*/
-/*}*/
-/*header{*/
-
-/*}*/
-/*nav{*/
-/*    top: 0;*/
-/*    width: 100%;*/
-/*    height: 60px;*/
-/*    background-color: black;*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    position: fixed;*/
-/*}*/
-/*main{*/
-/*    width: 100%;*/
-/*    height: 1000px;*/
-/*}*/
-/*.container{*/
-/*    margin: 90px 0;*/
-/*}*/
-/*.card{*/
-/*    margin: 35px auto;*/
-/*    border-radius: 5px;*/
-/*    width: 600px;*/
-/*    height: 600px;*/
-/*    background-color: white;*/
-/*    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);*/
-/*}*/
-/*.profile{*/
-/*    display: flex;*/
-/*}*/
-/*.profile img{*/
-/*    margin: 25px 10px 0px 25px;*/
-/*    border: 1px solid black;*/
-/*    border-radius: 30px;*/
-/*}*/
-/*.profile a{*/
-/*    margin-top: 38px;*/
-/*    text-decoration: none;*/
-/*    color: black;*/
-/*}*/
-/*.profile a:hover{*/
-/*    cursor: default;*/
-/*}*/
-/*.title{*/
-/*    margin: 15px auto;*/
-/*    width: 525px;*/
-/*    font-size: 25px;*/
-/*    font-weight: bold;*/
-/*}*/
-/*.content{*/
-/*    margin: 10px auto;*/
-/*    width: 510px;*/
-/*    height: 385px;*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    font-size: 20px;*/
-/*}*/
-/*.content a{*/
-/*    margin: 0 0 0 4px;*/
-/*    font-size: 15px;*/
-/*}*/
-/*.comment{*/
-/*    margin: auto;*/
-/*    width: 545px;*/
-/*    display: flex;*/
-/*}*/
-/*.comment img{*/
-/*    margin: auto 10px;*/
-/*    border: 1px solid black;*/
-/*    border-radius: 30px;*/
-/*    width: 40px;*/
-/*    height: 40px;*/
-/*}*/
-/*.comment input{*/
-/*    border: 1px solid gray;*/
-/*    padding: 0 15px;*/
-/*    width: 480px;*/
-/*    height: 40px;*/
-/*    border-radius: 15px;*/
-/*    font-size: 15px;*/
-/*    outline: none;*/
-/*}*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; padding: 0; box-sizing: border-box;
 }
 body{
     background-color: #f1f1f1;
@@ -149,21 +55,15 @@ main{
 }
 .profile{
     display: flex;
-    justify-content: space-between;
-}
-.profile p{
-    margin: auto 25px;
-}
-.profile-content{
-    display: flex;
+    align-items: start;
 }
 .profile img{
-    margin: 19px 10px 0px 25px;
+    margin: 25px 10px 0px 25px;
     border: 1px solid black;
     border-radius: 30px;
 }
 .profile a{
-    margin-top: 30px;
+    margin-top: 38px;
     text-decoration: none;
     color: black;
 }
@@ -230,7 +130,102 @@ main{
     background-color: #81BEF7;
     transition: 0.5s;
 }
+#modal-container{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.3);
+}
+#modal{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
 
+.canvas{
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow:  0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0);
+}
+
+.controls{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls .controls_btns{
+    margin-bottom: 30px;
+}
+
+.controls_btns button{
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 0px;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:  0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.controls_btns button:active{
+    transform: scale(0.98);
+}
+
+.controls .controls_colors{
+    display: flex;
+}
+
+.controls_colors .controls_color{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow:  0 4px 6px rgba(50, 50, 93, 0.11),
+    0 1px 3px rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.controls .controls_range{
+    margin-bottom: 30px;
+
+}
+
+#file-input{
+    overflow: hidden !important;
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+}
+
+.recommend{
+    display: flex;
+    margin: 30px;
+}
+
+.rom{
+    border-radius: 30px;
+    border: 1px solid black; width: 420px;
+}
 .spinner {
     display: flex;
     justify-content: center;

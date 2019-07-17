@@ -1,40 +1,31 @@
-var token;
-
 $(document).ready(function () {
-    var url = $(location).attr('href');
-    url = url.substring(url.indexOf("?") + 1, url.length);
-    token = url.split("=");
-
-    console.log(token);
-
-    if (token[0] == "token") {
-        $(".spinner").show();
-        $.ajax({
-            url: "http://78b27184.ngrok.io/api/friend/followerList",
-            headers: {"token": token[1]},
-            success: function (data) {
-                let container = $(".container");
-                data.data.forEach(data => {
-                    let div = `<div class="card">
+    $.ajax({
+        url: "http://a8cbbb7b.ngrok.io/api/friend/followerList?userId=gwak",
+        headers: {"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0IiwiaWF0IjoxNTYzMjc3MTYzLCJleHAiOjE1Njg0NjExNjMsImlzcyI6IkRHU1cuSFMuS1IiLCJzdWIiOiJ0b2tlbiJ9.4SIRwKfS-TfqUTdnRAPHceWgMjq5Ggc92VAENI-G7D8"},
+        success: function (data) {
+            console.log(data);
+            let container = $(".wrap");
+            data.data.forEach(data => {
+                let div = `<div class="friend-card">
                     <div class="profile">
-                        <img src="https://img.icons8.com/color/48/000000/user.png">
-                        <a href="#">${data.friendId}</a>
+                        <div class="profile-img">
+                            <img src="https://img.icons8.com/color/100/000000/user.png">
+                        </div>
+                        <div class="profile-name">
+                            <a href="#">${data.friendId}</a>
+                        </div>
+                    </div>                    
+                    <div class="follow-btn">
+                        <button onclick="follow()">+팔로우</button>                    
                     </div>
                 </div>`
-                    container.append(div);
-                });
-                $(".spinner").hide();
-            },
-            error: function (request, status, error) {
-                console.log(request, status, error);
-                $(".spinner").hide();
-            }
-        })
-    } else {
-        location.href = "/2019-1st-Hackathon-front/index.html";
-    }
+                container.append(div);
+            });
+            $(".spinner").hide();
+        },
+        error: function (request, status, error) {
+            console.log(request, status, error);
+            $(".spinner").hide();
+        }
+    })
 })
-
-function logout() {
-    location.href = "/2019-1st-Hackathon-front/index.html";
-}
